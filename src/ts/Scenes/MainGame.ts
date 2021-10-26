@@ -33,7 +33,7 @@ export default class MainGame extends Phaser.Scene {
 	health: number = 100;
 	level: number = 0;
 	speed: number = maxSpeed;
-	
+
 	scoreClip: Phaser.Sound.BaseSound;
 
 	//targetText: Phaser.GameObjects.Text;
@@ -50,9 +50,9 @@ export default class MainGame extends Phaser.Scene {
 
 		this.statusPanel = new StatusPanel(this, screenCenterX, screenCenterY);
 
-		this.add.sprite(screenCenterX / 4, screenCenterY - 50, "loading_ui").setOrigin(0, .5).setScale(this.maxScaleX, 1);
-		this.loadingImage = this.add.sprite(screenCenterX / 4, screenCenterY - 50, "white_ui").setOrigin(0, .5);
-		this.loadingTargetIndicatorImage = this.add.sprite(screenCenterX / 4, screenCenterY + .5, "white_ui").setOrigin(0, .5).setTint(0xFF0000);
+		this.add.sprite(screenCenterX / 4, screenCenterY, "loading_ui").setOrigin(0, .5).setScale(this.maxScaleX, 1);
+		this.loadingImage = this.add.sprite(screenCenterX / 4, screenCenterY, "white_ui").setOrigin(0, .5);
+		this.loadingTargetIndicatorImage = this.add.sprite(screenCenterX / 4, screenCenterY + 40.5, "white_ui").setOrigin(0, .5).setTint(0xFF0000);
 
 		//this.targetText = this.add.text(screenCenterX, 150, "").setFontSize(44).setOrigin(.5).setFontStyle("Bold");
 

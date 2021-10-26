@@ -1,4 +1,9 @@
 export default class StatusPanel extends Phaser.GameObjects.Container {
+
+    healthText: Phaser.GameObjects.BitmapText;
+    levelText: Phaser.GameObjects.BitmapText;
+    maxLevelText: Phaser.GameObjects.BitmapText;
+
     constructor(scene: Phaser.Scene, x: number, y: number) {
         super(scene, x, y, null);
 
@@ -7,9 +12,6 @@ export default class StatusPanel extends Phaser.GameObjects.Container {
         scene.add.existing(this);
     }
 
-    healthText: Phaser.GameObjects.Text;
-    levelText: Phaser.GameObjects.Text;
-    maxLevelText: Phaser.GameObjects.Text;
     SetImages(): void {
 
         console.log(this.y);
@@ -18,11 +20,11 @@ export default class StatusPanel extends Phaser.GameObjects.Container {
         var stairsImg = this.scene.add.sprite(-30, -this.y + 30, "stairs_ui").setOrigin(.5).setScale(.4);
         var trophyImg = this.scene.add.sprite(100, -this.y + 30, "trophy_ui").setOrigin(.5).setScale(.4);
 
-        var fontSize = 33;
+        var fontSize = 24;
         var textX = 35;
-        this.healthText = this.scene.add.text(heartImg.x + textX, heartImg.y, "100").setOrigin(0, .5).setFontSize(fontSize);
-        this.levelText = this.scene.add.text(stairsImg.x + textX, heartImg.y, "0").setOrigin(0, .5).setFontSize(fontSize);
-        this.maxLevelText = this.scene.add.text(trophyImg.x + textX, heartImg.y, "0").setOrigin(0, .5).setFontSize(fontSize);
+        this.healthText = this.scene.add.bitmapText(heartImg.x + textX, heartImg.y, "font_lato_bold", "100", fontSize).setOrigin(0, .5);
+        this.levelText = this.scene.add.bitmapText(stairsImg.x + textX, heartImg.y, "font_lato_bold", "0", fontSize).setOrigin(0, .5);
+        this.maxLevelText = this.scene.add.bitmapText(trophyImg.x + textX, heartImg.y, "font_lato_bold", "0", fontSize).setOrigin(0, .5);
 
         this.add([heartImg, stairsImg, trophyImg, this.healthText, this.levelText, this.maxLevelText]);
     }

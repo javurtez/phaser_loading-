@@ -1,18 +1,20 @@
 import MainGame from "../../Scenes/MainGame";
 
 export default class TargetPanel extends Phaser.GameObjects.Container {
-    targetText: Phaser.GameObjects.Text;
-    hitText: Phaser.GameObjects.Text;
+    
+    targetText: Phaser.GameObjects.BitmapText;
+    hitText: Phaser.GameObjects.BitmapText;
+
     constructor(scene: MainGame, x: number, y: number) {
         super(scene, x, y);
 
-        var fontSize = 20;
-        var target = scene.add.text(-100, -220, "Target").setFontSize(fontSize).setOrigin(.5).setFontStyle("Bold");
-        var hit = scene.add.text(100, -220, "Hit").setFontSize(fontSize).setOrigin(.5).setFontStyle("Bold");
+        var fontSize = 28;
+        var target = scene.add.bitmapText(-100, -220, "font_lato_bold", "Target", 29).setOrigin(.5);
+        var hit = scene.add.bitmapText(100, -220, "font_lato_bold", "Hit", 29).setOrigin(.5);
 
-        fontSize = 30;
-        this.targetText = scene.add.text(-100, -170, "").setFontSize(fontSize).setOrigin(.5).setFontStyle("Bold");
-        this.hitText = scene.add.text(100, -170, "").setFontSize(fontSize).setOrigin(.5).setFontStyle("Bold");
+        fontSize = 36;
+        this.targetText = scene.add.bitmapText(-100, -170, "font_lato_bold", "", 35).setOrigin(.5);
+        this.hitText = scene.add.bitmapText(100, -170, "font_lato_bold", "", 35).setOrigin(.5);
 
         this.add([target, hit, this.targetText, this.hitText]);
 

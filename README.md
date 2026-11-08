@@ -1,6 +1,6 @@
-# Game Project uses Phaser 3 with Visual Studio Code, TypeScript, and NodeJS
+# Game Project uses Phaser 4 with Visual Studio Code, TypeScript, and NodeJS
 
-The following is a game project that uses Phaser 3 and Visual Studio Code, using TypeScript and NodeJS.
+The following is a game project that uses Phaser 4 and Visual Studio Code, using TypeScript and NodeJS.
 
 ## Sources
 https://github.com/JamesSkemp/phaser-3-vsc-typescript-nodejs
@@ -9,7 +9,7 @@ https://github.com/JamesSkemp/phaser-3-vsc-typescript-nodejs
 https://javurtez.itch.io/loading
 
 ## How to Build the Site
-To build this project you'll need [Node.js](https://nodejs.org) installed.
+To build this project you'll need [Node.js](https://nodejs.org) 22.15 or newer installed (required by webpack-dev-server).
 
 Next run `npm install` in the root directory to install the various dependencies.
 
@@ -20,7 +20,7 @@ If you'd like to run a simple web server, install http-server via `npm install h
 If you'd like to lint your TypeScript/JavaScript, run `npm run lint`.
 
 ## Upgrading Phaser
-To upgrade Phaser 3 run `npm upgrade phaser`.
+To upgrade Phaser 4 run `npm upgrade phaser`.
 
 ## Sources
 https://github.com/JamesSkemp/phaser-3-vsc-typescript-nodejs
